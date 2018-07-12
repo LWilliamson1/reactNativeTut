@@ -7,7 +7,7 @@ const mainNavAction = router.getActionForPathAndParams('Home');
 const initialNavState = router.getStateForAction(mainNavAction);
 
 const NavReducer = (state = initialNavState, action) => {
-  return router.getStateForAction(action, state);
+  return router.getStateForAction(action, state) || state;
 };
 
 export default NavReducer;
